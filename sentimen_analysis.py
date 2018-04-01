@@ -6,14 +6,14 @@ from string import punctuation
 positive_counts=[]
 negative_counts=[]
 clean_tweets=[]
-# membaca file txt yang ada di komputer dan tweet yang tersimpan dalam file akan dipisahkan pada setiap baris. Gunakan fungsi split(‘\n’)
-tweets = open("/media/luqni/Data/oprekan/tugas kukuh/list.py/obama_tweets.txt").read()
+# membaca file txt yang ada di komputer dan tweet yang tersimpan dalam file akan dipisahkan pada setiap baris. Gunakan fungsi split 
+tweets = open("/media/luqni/Data/oprekan/tugas kukuh/sentimen_analysis/obama_tweets.txt").read()
 tweets_list = tweets.split('\n')
  
-pos_sent = open("/media/luqni/Data/oprekan/tugas kukuh/list.py/positive.txt").read()
+pos_sent = open("/media/luqni/Data/oprekan/tugas kukuh/sentimen_analysis/positive.txt").read()
 positive_words=pos_sent.split('\n')
  
-neg_sent = open("/media/luqni/Data/oprekan/tugas kukuh/list.py/Negative.txt").read()
+neg_sent = open("/media/luqni/Data/oprekan/tugas kukuh/sentimen_analysis/Negative.txt").read()
 negative_words=neg_sent.split('\n')
 # Lakukan proses looping agar mendapatkan tweet dari list tweets dan set positive_counter dan negative_counter dengan angka 0 dan lakukan proses shifting lowercase
 for tweet in tweets_list:
@@ -47,5 +47,5 @@ for tweet in tweets_list:
 # Gabungkan list tweets, list clean tweet, count positif dan count negatif menggunakan syntax zip
 output=zip(tweets_list,positive_counts,negative_counts,clean_tweets)
 # Simpan hasil sentiment analysis dalam bentuk CSV 
-writer = csv.writer(open('/media/luqni/Data/oprekan/tugas kukuh/list.py/obama_tweets.txt', 'wb'))
+writer = csv.writer(open('/media/luqni/Data/oprekan/tugas kukuh/sentimen_analysis/obama_tweets.txt', 'wb'))
 writer.writerows(output)

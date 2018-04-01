@@ -47,5 +47,5 @@ for tweet in tweets_list:
 # Gabungkan list tweets, list clean tweet, count positif dan count negatif menggunakan syntax zip
 output=zip(tweets_list,positive_counts,negative_counts,clean_tweets)
 # Simpan hasil sentiment analysis dalam bentuk CSV 
-writer = csv.writer(open('/media/luqni/Data/oprekan/tugas kukuh/sentimen_analysis/obama_tweets.txt', 'wb'))
+writer = csv.writer(open('/media/luqni/Data/oprekan/tugas kukuh/sentimen_analysis/Tweet_sentiment2.csv', 'wb'))
 writer.writerows(output)

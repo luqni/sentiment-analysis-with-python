@@ -7,5 +7,3 @@ Pada text prepocessing kita tidak akan benar-benar melakukan seluruh prepocessin
 
 Muhammad Luqni Baehaqi 
 STT Terpadu Nurul Fikri
-
-source by : http://codingasik.com/sentiment-analysis-dengan-python/
